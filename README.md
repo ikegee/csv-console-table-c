@@ -52,13 +52,9 @@ While this project serves as both a learning implementation and custom solution,
 
 - **PowerShell**:
    -Import-Csv "data.csv" | Format-Table
-   -Import-Csv "data.csv" | Out-GridView
 
 - **BASH**:
    -csvcut -c 1,2,3 data.csv
-   -csvlook -H data.csv
-   -csvstat -c 1,2,3 data.csv
-
 
 ## License
  
