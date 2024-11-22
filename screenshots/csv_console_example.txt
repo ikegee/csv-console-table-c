@@ -1,5 +1,5 @@
-PS C:\...\csv-console-table-c> gcc -o xyz  .\csv_console_table.c
-PS C:\...\csv-console-table-c> .\xyz.exe
+PS ~\csv-console-table-c> gcc -o xyz  .\csv_console_table.c
+PS ~\csv-console-table-c> .\xyz.exe
 
 Open file: generic.csv
 Matrix validation successful. Data structure consistent.
@@ -12,8 +12,8 @@ int  *char                                    float    *char                   i
 6    "'gcc -o xyz .\csv_console_table.c'"     19.17    "string"                6    TRUE  
 7    "'.\xyz .\yourfile.csv'"                 19.84    "*char"                 7    FALSE 
 
-PS C:\...\csv-console-table-c> .\xyz.exe // empty field in row 2
+PS ~\csv-console-table-c> .\xyz.exe // empty field in row 2
 Open file: generic.csv
 Error: Inconsistent number of fields in row 2. Expected 6, found 5.
 Matrix validation failed. Data type doesn't match column type.     
-PS C:\...\csv-console-table-c>
+PS ~\csv-console-table-c>
