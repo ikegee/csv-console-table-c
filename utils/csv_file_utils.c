@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 #include "../csv_processor.h"
 
 #define MAX_FILE_SIZE (10 * 1024)  // 10 KB
@@ -22,9 +23,20 @@ bool validate_file_size(FILE *file) {
 }
 
 FILE* open_file(const char* filename) {
+    if (filename == NULL) {
+        printf("Error: filename is required.\n");
+        return NULL;
+    }
+
+    const char *extension = strrchr(filename, '.');
+    if (extension == NULL || strcmp(extension, ".csv") != 0) {
+        printf("Error: file must have a .csv extension: %s\n", filename);
+        return NULL;
+    }
+
     FILE *file = fopen(filename, "r");
     if (file == NULL) {
-        printf("Error opening file: %s\n", filename);
+        printf("Error: file does not exist or cannot be opened: %s\n", filename);
         return NULL;
     }
     return file;
