@@ -12,8 +12,8 @@
 #include "utils/csv_table_utils.c"
 #include "utils/csv_validator.c"
 
-// gcc -o xyz  ./csv_console_table.c ; replace '-o xyz' with '-fsyntax-only' to check syntax
-// ./xyz {yourfile.csv}cls
+// `gcc csv_console_table.c -o xyz  && ./xyz.exe`; replace '-o xyz' with '-fsyntax-only' to check syntax
+// ./xyz {yourfile.csv}
 int main(int argc, char *argv[]) {
     const char *filename = (argc > 1) ? argv[1] : DEFAULT_CSV_FILE;
     printf("Open file: %s\n", filename);
